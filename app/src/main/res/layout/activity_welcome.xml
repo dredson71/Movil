@@ -6,20 +6,20 @@
     android:id="@+id/activity_welcome"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:paddingTop="16dp"
-    tools:context=".WelcomeActivity"
+    android:background="@drawable/ihfnlpbze7o01"
     android:orientation="vertical"
-    >
+    android:paddingLeft="16dp"
+    android:paddingTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingBottom="16dp"
+    tools:context=".WelcomeActivity">
 
     <TextView
         android:id="@+id/tvTittle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/welcome_to_alara"
         android:layout_gravity="center_horizontal"
+        android:text="@string/welcome_to_alara"
         android:textSize="20sp" />
 
     <TextView
@@ -27,11 +27,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="@string/welcome_to_alara"
-        android:textStyle="bold"
-        android:textSize="15sp"
         android:layout_marginTop="50dp"
-        />
+        android:text="@string/welcome_to_alara"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <ImageView
         android:id="@+id/imvPhoto"
@@ -45,8 +44,8 @@
         android:id="@+id/btnSignOut"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/signout_button"
         android:layout_marginTop="50dp"
+        android:text="@string/signout_button"
 
         />
 
