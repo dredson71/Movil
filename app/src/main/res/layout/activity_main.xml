@@ -1,59 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/ihfnlpbze7o01"
+    android:background="#393939"
 
-    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <EditText
-
-        android:id="@+id/edtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_email"
-        android:inputType="textEmailAddress" />
-
-    <EditText
-        android:id="@+id/edtPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/hint_password"
-        android:inputType="textPassword" />
-
     <Button
-        android:id="@+id/btnCreateAccount"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/create_account_button"
+        android:id="@+id/btn_Ingresar"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
+        android:background="@drawable/button_edit"
+        android:text="@string/btn_signIng"
+        android:textColor="#FFFFFF"
+        android:hint="@string/edtext_password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
 
-        />
+    <EditText
+        android:id="@+id/p_password"
+        android:layout_width="210dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text"
+        android:ellipsize="start"
+        android:ems="10"
+        android:hint="@string/edtext_password"
+        android:inputType="textPassword"
+        android:paddingLeft="15dp"
+        android:textColor="#636363"
+        android:textColorHint="#ABABAB"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.56" />
 
-    <Button
-        android:id="@+id/btnSignIn"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/signin_button"
+    <EditText
+        android:id="@+id/txt_User"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text"
 
-        />
+        android:ellipsize="start"
+        android:ems="10"
+        android:hint="@string/ed_username"
 
-    <com.google.android.gms.common.SignInButton
-        android:id="@+id/btnSignInGoogle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:textColor="#636363"
 
-        />
-
-    <com.facebook.login.widget.LoginButton
-        android:id="@+id/btnSignInFacebook"
-        android:layout_width="match_parent"
-        android:layout_height="81dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-
-        />
-</LinearLayout>
+        android:textColorHint="#ABABAB"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.464" />
+</androidx.constraintlayout.widget.ConstraintLayout>

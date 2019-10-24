@@ -1,4 +1,4 @@
-package com.myapp.alara;
+package com.example.alara;
 
 import org.junit.Test;
 
