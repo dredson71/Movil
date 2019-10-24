@@ -1,5 +1,6 @@
 package com.example.alara;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -10,13 +11,17 @@ import android.media.Image;
 import android.os.Bundle;
 import android.provider.ContactsContract;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 
 import com.bumptech.glide.Glide;
 import com.example.retrofit.*;
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -29,6 +34,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Main_App extends AppCompatActivity implements ListCancionAdapter.OnNoteListener {
     private static final String TAG ="CANCION";
+    private BottomNavigationView mainNav;
     private ArrayList<Cancion> dataset = new ArrayList<>();
     private Retrofit retrofit;
     private RecyclerView recyclerView;
@@ -40,9 +46,13 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
         recyclerView =(RecyclerView) findViewById(R.id.recycler);
         listacancionAdapter = new ListCancionAdapter(this);
         recyclerView.setAdapter(listacancionAdapter);
+        mainNav=(BottomNavigationView) findViewById(R.id.navbar_item);
         recyclerView.setHasFixedSize(true);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
+    Menu menu = mainNav.getMenu();
+    MenuItem menuItem= menu.getItem(0);
+    menuItem.setChecked(true);
 
 
          retrofit = new Retrofit.Builder()
@@ -51,7 +61,26 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
                 .build();
 
         obtenerDatos();
-
+        mainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                switch (menuItem.getItemId()){
+                    case R.id.home_navbar:
+                        break;
+                    case R.id.author_navbar:
+                        Intent intent2 = new Intent(getApplicationContext(),AuthorActivity.class);
+                        startActivity(intent2);
+                        break;
+                    case R.id.account_navbar:
+                        Intent intent3 = new Intent(getApplicationContext(),AccountActivity.class);
+                        startActivity(intent3);
+                        break;
+                        default:
+                            break;
+                }
+                return false;
+            }
+        });
 
     }
 

@@ -12,7 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".RegistroActivity"></activity>
+        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".AuthorActivity" />
+        <activity android:name=".RegistroActivity" />
         <activity android:name=".MusicActivity" />
         <activity android:name=".Main_App" />
         <activity android:name=".MainActivity">
