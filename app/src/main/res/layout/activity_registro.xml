@@ -19,12 +19,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintVertical_bias="0.797" />
 
     <EditText
         android:id="@+id/p_Name_Register"
-        android:layout_width="205dp"
-        android:layout_height="44dp"
+        android:layout_width="337dp"
+        android:layout_height="62dp"
         android:background="@drawable/edit_text"
 
         android:ellipsize="start"
@@ -36,18 +36,17 @@
         android:textColor="#636363"
 
         android:textColorHint="#ABABAB"
-        android:textSize="13sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.485"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.419" />
+        app:layout_constraintVertical_bias="0.373" />
 
     <EditText
         android:id="@+id/p_passwordRegister"
-        android:layout_width="210dp"
-        android:layout_height="44dp"
+        android:layout_width="337dp"
+        android:layout_height="62dp"
         android:background="@drawable/edit_text"
         android:ellipsize="start"
         android:ems="10"
@@ -56,7 +55,7 @@
         android:paddingLeft="15dp"
         android:textColor="#636363"
         android:textColorHint="#ABABAB"
-        android:textSize="13sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
@@ -66,8 +65,8 @@
 
     <EditText
         android:id="@+id/txt_UserRegister"
-        android:layout_width="205dp"
-        android:layout_height="44dp"
+        android:layout_width="337dp"
+        android:layout_height="62dp"
         android:background="@drawable/edit_text"
 
         android:ellipsize="start"
@@ -79,12 +78,26 @@
         android:textColor="#636363"
 
         android:textColorHint="#ABABAB"
-        android:textSize="13sp"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.522" />
+        app:layout_constraintVertical_bias="0.499" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="181dp"
+        android:layout_marginTop="143dp"
+        android:layout_marginEnd="197dp"
+        android:fontFamily="@font/alfa_slab_one"
+        android:text="@string/app_name"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

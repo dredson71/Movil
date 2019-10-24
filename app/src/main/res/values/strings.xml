@@ -2,6 +2,7 @@
     <string name="app_name">Alara</string>
     <string name="ed_username">   Username</string>
     <string name="edtext_password">   Password</string>
-    <string name="btn_signIng">Sign in</string>
+    <string name="btn_signIng">Log in</string>
+    <string name="btn_Registro">Not a user? Sign up</string>
     <string name="btn_signName">Name</string>
 </resources>
