@@ -4,43 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#393939"
-
-    tools:context=".MainActivity">
+    tools:context=".RegistroActivity">
 
     <Button
-        android:id="@+id/btn_Ingresar"
+        android:id="@+id/btn_Registrar"
         android:layout_width="205dp"
         android:layout_height="44dp"
         android:background="@drawable/button_edit"
-        android:hint="@string/edtext_password"
-        android:onClick="Buscar"
-        android:text="@string/btn_signIng"
-        android:textColor="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.818" />
-
-    <Button
-        android:id="@+id/btn_Regis"
-        android:layout_width="205dp"
-        android:layout_height="44dp"
-        android:background="@drawable/button_edit"
-        android:hint="@string/edtext_password"
-        android:onClick="Registro"
+        android:hint="Register"
+        android:onClick="Registrar"
         android:text="Register"
         android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.715" />
+        app:layout_constraintVertical_bias="0.755" />
 
     <EditText
-        android:id="@+id/p_password"
+        android:id="@+id/p_Name_Register"
+        android:layout_width="205dp"
+        android:layout_height="44dp"
+        android:background="@drawable/edit_text"
+
+        android:ellipsize="start"
+        android:ems="10"
+        android:hint="@string/btn_signName"
+
+        android:inputType="textPersonName"
+        android:paddingLeft="15dp"
+        android:textColor="#636363"
+
+        android:textColorHint="#ABABAB"
+        android:textSize="13sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.419" />
+
+    <EditText
+        android:id="@+id/p_passwordRegister"
         android:layout_width="210dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_text"
@@ -57,10 +62,10 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.56" />
+        app:layout_constraintVertical_bias="0.624" />
 
     <EditText
-        android:id="@+id/txt_User"
+        android:id="@+id/txt_UserRegister"
         android:layout_width="205dp"
         android:layout_height="44dp"
         android:background="@drawable/edit_text"
@@ -77,8 +82,9 @@
         android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintHorizontal_bias="0.475"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.464" />
+        app:layout_constraintVertical_bias="0.522" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

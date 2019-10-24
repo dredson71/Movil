@@ -83,6 +83,7 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
     public void oneNoteClick(int position){
         Intent intent = new Intent(getApplicationContext(),MusicActivity.class);
         intent.putExtra("urlcancion",dataset.get(position).getUrl());
+        intent.putExtra("nameCancion",dataset.get(position).getNombre());
         startActivity(intent);
     }
 }
