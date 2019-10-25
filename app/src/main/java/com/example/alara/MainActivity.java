@@ -67,16 +67,16 @@ public class MainActivity extends AppCompatActivity {
                 if((etNom.getText().toString().equalsIgnoreCase(fila.getString(0))) &&  etPas.getText().toString().equalsIgnoreCase(fila.getString(1)) ){
                     Intent intent = new Intent(getApplicationContext(),Main_App.class);
                     startActivity(intent);
-                    Toast.makeText(getApplicationContext(),"Acceso exitoso",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Acceso exitoso",Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    Toast.makeText(getApplicationContext(),"Contrasena incorrecta",Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(),"Contrasena incorrecta",Toast.LENGTH_SHORT).show();
                     etPas.setText("");
                     etNom.requestFocus();
                     db.close();
                 }
             }else{
-                Toast.makeText(getApplicationContext(),"No existe usuario",Toast.LENGTH_LONG).show();
+                Toast.makeText(getApplicationContext(),"No existe usuario",Toast.LENGTH_SHORT).show();
                 etNom.setText("");
                 etPas.setText("");
                 etNom.requestFocus();
@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         else{
-            Toast.makeText(getApplicationContext(),"Se debe llenar todos los campos",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Se debe llenar todos los campos",Toast.LENGTH_SHORT).show();
 
         }
     }

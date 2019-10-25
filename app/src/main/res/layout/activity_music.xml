@@ -4,39 +4,120 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".MusicActivity">
 
     <ImageView
         android:id="@+id/fotoPlayCancion"
-        android:layout_width="317dp"
-        android:layout_height="307dp"
+        android:layout_width="337dp"
+        android:layout_height="342dp"
         android:layout_gravity="center_horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.313" />
+        app:layout_constraintVertical_bias="0.195" />
 
     <TextView
         android:id="@+id/playCancion"
-        android:layout_width="230dp"
-        android:layout_height="25dp"
-        android:gravity="center_horizontal"
+        android:layout_width="334dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="44dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="left"
         android:text="@string/app_name"
-        android:textAllCaps="true"
+        android:textAllCaps="false"
+        android:textSize="28sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/fotoPlayCancion"
-        app:layout_constraintVertical_bias="0.14" />
+        app:layout_constraintVertical_bias="0.171" />
 
     <Button
         android:id="@+id/btnPlay"
-        android:layout_width="69dp"
-        android:layout_height="54dp"
-        android:layout_marginStart="168dp"
-        android:layout_marginTop="100dp"
+        android:layout_width="109dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
         android:background="@drawable/play"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fotoPlayCancion" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.866" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonecualizer"
+        android:layout_width="39dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/back2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.9"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/nextleft"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <Button
+        android:id="@+id/button11"
+        android:layout_width="33dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/nextright"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnPlay"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.984" />
+
+    <Button
+        android:id="@+id/button12"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/aleatorio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button10"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.941" />
+
+    <Button
+        android:id="@+id/button13"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="76dp"
+        android:background="@drawable/cola"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/button11"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

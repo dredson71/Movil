@@ -2,6 +2,7 @@ package com.example.alara;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
@@ -20,6 +21,8 @@ public class MusicActivity extends AppCompatActivity {
     private ImageView fotoImagen;
     private TextView txtNombre;
     private Button botonPla;
+    private Button retrocederbutton;
+    private Button equalizerButton;
     MediaPlayer mPlayer;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,7 +30,18 @@ public class MusicActivity extends AppCompatActivity {
         setContentView(R.layout.activity_music);
         fotoImagen=(ImageView)findViewById(R.id.fotoPlayCancion);
         txtNombre=(TextView)findViewById(R.id.playCancion);
+        retrocederbutton=(Button)findViewById(R.id.button);
+        equalizerButton=(Button)findViewById(R.id.buttonecualizer);
         botonPla=(Button)findViewById(R.id.btnPlay);
+
+
+
+
+
+
+
+
+
         Bundle datos= getIntent().getExtras();
         String url= datos.getString("urlcancion");
         String named= datos.getString("nameCancion");
@@ -44,6 +58,26 @@ public class MusicActivity extends AppCompatActivity {
             e.printStackTrace();
         }
 
+        retrocederbutton.setOnClickListener(new View.OnClickListener(){
+        @Override
+        public void onClick(View view) {
+            mPlayer.pause();
+            botonPla.setBackgroundResource(R.drawable.play);
+            Intent intent = new Intent(getApplicationContext(),Main_App.class);
+            startActivity(intent);
+        }
+        });
+
+        equalizerButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                mPlayer.pause();
+                botonPla.setBackgroundResource(R.drawable.play);
+                Intent intent = new Intent(getApplicationContext(),EcualizadorActivity.class);
+                startActivity(intent);
+            }
+        });
+
         botonPla.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -58,7 +92,16 @@ public class MusicActivity extends AppCompatActivity {
             }
         });
 
+        onBackPressed();
+
     }
 
+
+
+
+    @Override
+    public void onBackPressed(){
+
+    }
 
 }

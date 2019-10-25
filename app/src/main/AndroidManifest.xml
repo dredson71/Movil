@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".AccountActivity"></activity>
+        <activity android:name=".EcualizadorActivity"></activity>
+        <activity android:name=".AccountActivity" />
         <activity android:name=".AuthorActivity" />
         <activity android:name=".RegistroActivity" />
         <activity android:name=".MusicActivity" />

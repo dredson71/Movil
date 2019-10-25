@@ -17,6 +17,7 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 import com.bumptech.glide.Glide;
@@ -81,7 +82,7 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
                 return false;
             }
         });
-
+        onBackPressed();
     }
 
     private void obtenerDatos(){
@@ -108,9 +109,18 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
         });
     }
 
+
+
+
+    @Override
+    public void onBackPressed(){
+
+    }
+
     @Override
     public void oneNoteClick(int position){
         Intent intent = new Intent(getApplicationContext(),MusicActivity.class);
+        Toast.makeText(getApplicationContext(),"Cargando ...",Toast.LENGTH_LONG).show();
         intent.putExtra("urlcancion",dataset.get(position).getUrl());
         intent.putExtra("nameCancion",dataset.get(position).getNombre());
         intent.putExtra("mp3cancion",dataset.get(position).getContenido());

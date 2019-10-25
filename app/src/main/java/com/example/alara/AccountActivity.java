@@ -41,5 +41,12 @@ public class AccountActivity extends AppCompatActivity {
                 return false;
             }
         });
+
+        onBackPressed();
+    }
+
+    @Override
+    public void onBackPressed(){
+
     }
 }

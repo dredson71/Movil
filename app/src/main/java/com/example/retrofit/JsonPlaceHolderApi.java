@@ -8,4 +8,8 @@ import retrofit2.http.GET;
 public interface JsonPlaceHolderApi {
     @GET("cancion")
     Call<List<Cancion>> getCancion();
+
+
+    @GET("artista")
+    Call<List<Autor>> getArtista();
 }
