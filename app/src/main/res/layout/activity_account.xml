@@ -8,6 +8,36 @@
     android:background="@drawable/background"
     tools:context=".AccountActivity">
 
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_Discografica"
+        android:layout_width="match_parent"
+        android:layout_height="593dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="84dp"
+        android:layout_marginBottom="54dp"
+        android:paddingTop="18dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="26dp"
+        android:layout_marginTop="35dp"
+        android:fontFamily="sans-serif-black"
+        android:text="Artistas"
+        android:textSize="30sp" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/navbar_item"
         android:layout_width="match_parent"

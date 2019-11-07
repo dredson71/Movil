@@ -20,5 +20,7 @@ public interface JsonPlaceHolderApi {
     @GET("artista")
     Call<List<Autor>> getArtista();
 
+    @GET("discografica")
+    Call<List<Discografica>> getDiscografica();
 
 }
