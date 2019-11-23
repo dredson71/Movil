@@ -3,7 +3,7 @@
     package="com.example.alara">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
 
     <application
         android:allowBackup="true"
@@ -13,7 +13,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".EcualizadorActivity"></activity>
+        <activity android:name=".AddMusic"></activity>
+        <activity android:name=".EcualizadorActivity" />
         <activity android:name=".AccountActivity" />
         <activity android:name=".AuthorActivity" />
         <activity android:name=".RegistroActivity" />

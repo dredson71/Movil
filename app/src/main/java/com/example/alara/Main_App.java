@@ -14,6 +14,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -39,6 +40,7 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
     private ArrayList<Cancion> dataset = new ArrayList<>();
     private Retrofit retrofit;
     private RecyclerView recyclerView;
+    private Button addbutton;
     private ListCancionAdapter listacancionAdapter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +51,7 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
         recyclerView.setAdapter(listacancionAdapter);
         mainNav=(BottomNavigationView) findViewById(R.id.navbar_item);
         recyclerView.setHasFixedSize(true);
+        addbutton=(Button)findViewById(R.id.buttonAddMusic);
         GridLayoutManager layoutManager = new GridLayoutManager(this, 3);
         recyclerView.setLayoutManager(layoutManager);
     Menu menu = mainNav.getMenu();
@@ -60,6 +63,16 @@ public class Main_App extends AppCompatActivity implements ListCancionAdapter.On
                 .baseUrl("https://rocky-fjord-18899.herokuapp.com/api/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
+
+
+
+        addbutton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(),AddMusic.class);
+                startActivity(intent);
+            }
+        });
 
         obtenerDatos();
         mainNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
